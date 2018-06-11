@@ -21,7 +21,7 @@ import CountDown from 'react-circle-count-down'
 ## Props
 | Name | Type | Default | Description |
 |------|------|---------|-------------|
-| progressTime <font color=red >(Required)</font> | number | 10 | Total time to count down |
+| progressTime <font size=4 color=#D2691E>列表:</font> | number | 10 | Total time to count down |
 | barColor | string | '#337fff' | Progress bar color |
 | hideAfterScroll | bool | false | if `true` the progress bar will hide after scroll |
 | timeAfterScrollToHide | number | 1000 | Interval time(ms) for hideAfterScroll |
