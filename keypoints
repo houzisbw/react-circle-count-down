@@ -1,0 +1,5 @@
+(1)本插件是用webpack打包，以前的插件直接babel编译没有打包
+(2)使用autoprefixer时要新建一个postcss.config.js,并安装postcss-loader
+(3)autoprefixer要在package.json里指定browsersList
+(4)本插件打包时未排除node_modules里的部分代码，比如prop-types,后续删除
+(5)webpack.config.js里输出设置libraryTarget: 'commonjs2'
