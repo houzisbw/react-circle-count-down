@@ -21,8 +21,13 @@ import CountDown from 'react-circle-count-down'
 ## Props
 | Name | Type | Default | Description |
 |------|------|---------|-------------|
-| progressTime <font size=4 color=#D2691E>列表:</font> | number | 10 | Total time to count down |
-| barColor | string | '#337fff' | Progress bar color |
-| hideAfterScroll | bool | false | if `true` the progress bar will hide after scroll |
-| timeAfterScrollToHide | number | 1000 | Interval time(ms) for hideAfterScroll |
-
+| progressTime (required) | number | 10 | Total time to count down |
+| isStart (required) | bool | none |A bool flag to start the count-down progress,set it to **true** to start the count-down, you can reset the count down by set it to **true** |
+| circleDiameter | number | 50 | The circle's diameter, controls the size of the component |
+| circleColor | string | '#337fff' | The color of circle,in the picture above is blue |
+| strokeWidth | number | 10 (max:100) | The width of the circle |
+| timeMethod | string | 'integer',one of ['integer','decimals'] | 'integer' means the text of countdown is integer, 'decimals' means the text is float number |
+| hideAfterDone | bool | false | whether to hide the circle after count-down completed |
+| onCountDownDone | function | none | The callback when the count-dwon is completed |
+| onCountDownStart | function | none | The callback when the count-dwon is started |
+| fontStyleObj | object | {} | The style object to customize the cound-down text |
