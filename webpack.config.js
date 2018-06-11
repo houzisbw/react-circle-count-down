@@ -4,7 +4,8 @@ module.exports = {
 	entry: './src/index.js',
 	output: {
 		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'dist'),
+		libraryTarget: 'commonjs2'
 	},
 	module: {
 		rules: [
@@ -19,5 +20,5 @@ module.exports = {
 			}
 		]
 	},
-	externals: [nodeExternals()]
+	mode:"development"
 };

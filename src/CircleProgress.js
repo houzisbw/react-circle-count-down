@@ -27,12 +27,18 @@ class CircleProgress extends React.Component{
 			strokeDasharray:this.state.perimeter+' 0',
 			//判断是否是ie，如果是ie则动画效果改为分段
 			isIE:navigator.userAgent.indexOf('Trident')!==-1
-		})
+		});
+		//启动倒计时
+		if(this.props.isStart){
+			this.props.onCountDownStart && this.props.onCountDownStart();
+			this.runCountDown();
+		}
 	}
 	componentWillReceiveProps(nextProps){
 		//这里只要设置了isStart为true就启动倒计时
 		if(nextProps.isStart){
-			this.props.onCountDownStart();
+			//必须先判断该方法是否存在
+			this.props.onCountDownStart && this.props.onCountDownStart();
 			this.runCountDown();
 		}
 	}
@@ -61,7 +67,7 @@ class CircleProgress extends React.Component{
 						strokeDasharray:'0 '+this.state.perimeter
 					});
 					//调用回调函数
-					this.props.onCountDownDone();
+					this.props.onCountDownDone && this.props.onCountDownDone();
 					return;
 				}
 				this.update();
