@@ -1,0 +1,26 @@
+.react-circle-progress-wrapper{
+    width:100px;
+    height:100px;
+    position: relative;
+}
+.hide-circle-progress{
+    display: none;
+}
+.react-circle-progress-wrapper #progressCircle,.react-circle-progress-wrapper #progressCircleDown{
+    transition-property:stroke-dasharray;
+    transition-duration:0s;
+    transition-timing-function:linear;
+}
+
+.react-circle-count-down{
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    text-align: center;
+    line-height: 100px;
+    font-size: 20px;
+    font-weight: bold;
+}
